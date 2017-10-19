@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <style>
+        	*{
+        		margin: 0;
+        		padding: 0;
+        	}
+        	.container{
+        		margin:  100px auto;
+        		width: 500px;
+        		height: 500px;
+        		border:1px solid #000;
+        		position: relative;
+        	}
+        	.ball{
+        		/* position: absolute;*/
+        		width: 50px;
+        		height: 50px; 
+        		background-color: red;
+        		border-radius: 50%;
+		margin: auto;
+		animation : dropDown 2s ease-in infinite; 
+        	}
+
+        	@keyframes dropDown{
+        		50%,80%,90%,to{	/*底部*/
+        			transform: translateY(450px);
+        			animation-timing-function: ease-out;
+        		}
+        		70%{
+        			transform: translateY(300px);
+        			animation-timing-function: ease-in;
+        		}
+        		85%{
+        			transform: translateY(400px);
+        			animation-timing-function: ease-in;
+        		}
+
+        		95%{
+        			transform: translateY(420px);
+        			animation-timing-function: ease-in;
+        		}
+
+        	}
+        </style>
+    </head>
+
+    <body>
+    <div class="container">
+    	<div class="ball"></div>
+    </div>
+    </body>
+
+</html>
