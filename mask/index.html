@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.cover{
+			position: absolute;
+			width: 167px;
+			height: 40px;
+			border: 0 solid #000;
+			border-width: 12px 1696px 2160px 40px;
+			opacity: .75;
+			/* border-radius: 50%;  */
+			/* box-shadow: 0 0 0 100px #000; */
+
+		}
+		.cover::before{
+			content: "";
+			width: 100%;
+			height: 100%;
+			display: block;
+			 border: 0 solid #000;
+			border-width: 100px;
+			border-radius: 50%;
+			position:absolute;
+			left: -100px;
+			top:-100px;
+		}
+	</style>
+</head>
+<body>
+	<div class="cover"></div>
+	<div class="content">
+		<p>asddadasddadasddadasddadasddadasddadasddadasddadasddadasddadasddad</p>
+		<p>asddadasddadasddadasddadasddadasddadasddadasddadasddadasddadasddad</p>
+		<p>asddadasddadasddadasddadasddadasddadasddadasddadasddadasddadasddad</p>
+		<p>asddadasddadasddadasddadasddadasddadasddadasddadasddadasddadasddad</p>
+		<p>asddadasddadasddadasddadasddadasddadasddadasddadasddadasddadasddad</p>
+	</div>
+</body>
+</html>
