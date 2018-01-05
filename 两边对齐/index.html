@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin : 0;
+			padding: 0;
+		}
+		p{
+			width: 4em;
+			border : 1px solid red;
+			text-align: justify;
+			font-size: 20px;
+			line-height: 1;
+			height: 1em;
+			overflow : hidden;
+		}
+		p::after{
+			content: '';
+			display: inline-block;
+			width: 100%;
+			border : 1px solid blue;
+		}
+	</style>
+</head>
+<body>
+	<p>姓名</p>
+	<p>家庭住址</p>
+</body>
+</html>

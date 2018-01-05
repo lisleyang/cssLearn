@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.css-cell{
+			width: 200px;
+			height: 100px;
+			line-height: 100px;
+			text-align: center;
+			border-radius: 10px;
+			background-color: #00ccbb;
+			position: relative;
+		}
+		.css-cell::after{
+			content : '';
+			top: 100px;
+			left: 100px;
+			position: absolute;
+			border-right: 20px solid transparent;
+			border-top: 20px solid #00ccbb;
+			border-bottom: 20px solid transparent;
+			border-left: 20px solid transparent;
+			transform : translate(20px,0px) rotate(135deg);
+			transform-origin: 0 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="css-cell">
+		气泡悬浮框
+	</div>
+</body>
+</html>
