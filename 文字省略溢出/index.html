@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .box1{
+        width: 200px;
+        border: 1px solid #000;
+        white-space: nowrap;    /*不换行*/
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: 41px;
+    }
+    .box2{
+        width: 200px;
+        border:  1px solid #000;
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-line-clamp : 2;
+        -webkit-box-orient : vertical; 
+    }
+    </style>
+</head>
+<body>
+    <p>单行</p>
+    <div class="box1">
+        阿斯顿阿迪是大大的阿斯顿撒的撒的大阿斯顿阿迪是大大的阿斯顿撒的撒的大阿斯顿阿迪是大大的阿斯顿撒的撒的大阿斯顿阿迪是大大的阿斯顿撒的撒的大阿斯顿阿迪是大大的阿斯顿撒的撒的大阿斯顿阿迪是大大的阿斯顿撒的撒的大阿斯顿阿迪是大大的阿斯顿撒的撒的大阿斯顿阿迪是大大的阿斯顿撒的撒的大阿斯顿阿迪是大大的阿斯顿撒的撒的大阿斯顿阿迪是大大的阿斯顿撒的撒的大阿斯顿阿迪是大大的阿斯顿撒的撒的大
+    </div>
+    <p>多行</p>
+    <div class="box2">
+            阿斯顿阿迪是大大的阿斯顿撒的撒的大阿斯顿阿迪是大大的阿斯顿撒的撒的大阿斯顿阿迪是大大的阿斯顿撒的撒的大阿斯顿阿迪是大大的阿斯顿撒的撒的大阿斯顿阿迪是大大的阿斯顿撒的撒的大阿斯顿阿迪是大大的阿斯顿撒的撒的大阿斯顿阿迪是大大的阿斯顿撒的撒的大阿斯顿阿迪是大大的阿斯顿撒的撒的大阿斯顿阿迪是大大的阿斯顿撒的撒的大阿斯顿阿迪是大大的阿斯顿撒的撒的大阿斯顿阿迪是大大的阿斯顿撒的撒的大
+    </div>
+    <p>IE下一般使用一张图片在右下角挡着</p>
+</body>
+</html>

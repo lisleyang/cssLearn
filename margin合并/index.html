@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    .dad{
+        border: 10px solid blue;
+    }
+    .dad1{
+        outline: 10px solid blue;
+    }
+    .son{
+        line-height: 20px;
+        border: 1px solid red;
+        padding: 10px;
+        margin: 20px;
+    }
+    .dad2{
+        outline: 10px solid blue;
+        margin: 10px;
+    }
+    .son{
+
+    }
+    </style>
+</head>
+<body>
+    <p>正常情况，父级有border或padding或overflow:hidden，能包住子级元素</p>
+    <div class="dad">
+        <div class="son">111</div>
+    </div>
+    <br/>
+    <p>当父级既没有padding，也没有border的时候，子级的margin会出来</p>
+    <div class="dad1">
+        <div class="son">111</div>
+    </div>
+    <br/>
+    <p>父级有margin时，也会与子级的margin重叠</p>
+    <div class="dad2">
+        <div class="son">111</div>
+    </div>
+</body>
+</html>
