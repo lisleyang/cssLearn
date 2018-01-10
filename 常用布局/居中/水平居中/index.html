@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            
+            .parent {
+                background-color: green;
+            }
+            
+            .child {
+                width: 200px;
+                text-align: center;
+                background-color: red;
+                margin: 0 auto;
+            }
+            
+            .parent1 {
+                background-color: green;
+                text-align: center;
+            }
+            
+            .child1 {
+                background-color: red;
+            }
+            
+            .parent2 {
+                display: flex;
+                justify-content: center;
+                background-color: green;
+            }
+            
+            .child2 {
+                background-color: red;
+            }
+        </style>
+    </head>
+    <p>块级元素居中 : margin：0 auto;</p>
+    <div class="parent">
+        <div class="child">123</div>
+    </div>
+    <p>行内元素居中 : 父级元素:text-align:center;</p>
+    <div class="parent1">
+        <span class="child1">123</span>
+    </div>
+
+    <p>flex布局:不管子元素是块级元素还是行内元素</p>
+    <div class="parent2">
+        <span class="child2">123</span>
+    </div>
+    </br>
+    <div class="parent2">
+        <p class="child2">123</p>
+    </div>
+    </body>
+
+</html>

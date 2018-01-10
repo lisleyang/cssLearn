@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style lang="less">
+            .parent {
+                width: 300px;
+                margin: 0 auto;
+                background-color: green;
+                box-sizing: border-box;
+            }
+            /*高度确定的child*/
+            
+            .child {
+                width: 200px;
+                height: 200px;
+                background-color: red;
+            }
+            /*高度不确定的child*/
+            
+            .child_1 {
+                width: 200px;
+                background-color: red;
+            }
+            
+            .parent1 {
+                padding-top: 50px;
+                padding-bottom: 50px;
+            }
+            
+            .child2 {}
+            
+            .borderBox {
+                border-top: 1px solid #ccc;
+                margin: 20px 0;
+            }
+            
+            .parent_1 {
+                display: table-cell;
+                width: 500px;
+                height: 500px;
+                background-color: green;
+                vertical-align: middle;
+                margin: 0 auto;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>块级元素垂直居中</h1>
+        <h2>parent高度不确定:</h2>
+        <h3>子元素高度确定</h3>
+        <p>方法: 让parent的paddingTop和paddingBottom相同</p>
+        <div class="parent parent1">
+            <div class="child child1">我的高度是200像素</div>
+        </div>
+
+        <p>子元素高度不确定</p>
+        <p>方法: 让parent的paddingTop和paddingBottom相同</p>
+        <div class="parent parent1">
+            <div class="child_1 child2">我的高度是根据文字内容产生的；我的高度是根据文字内容产生的；我的高度是根据文字内容产生的；我的高度是根据文字内容产生的；我的高度是根据文字内容产生的；我的高度是根据文字内容产生的；我的高度是根据文字内容产生的；</div>
+        </div>
+        <div class="borderBox"></div>
+
+        <h2>parent高度确定（要尽量避免这种情况）</h2>
+        <h3>需要兼容IE ：table布局(display:table-cell;vertical-align:middle)</h3>
+        <div class="parent_1">
+            <div class="child"></div>
+        </div>
+        <h3>不兼容IE : flex布局</h3>
+
+        <h1>行内元素垂直居中</h1>
+        <p style="line-height:20px;padding:10px 0;font-size:16px;border : 1px solid #ccc;">思想是设置line-height和padding，不要设置parent的height</p>
+    </body>
+
+</html>

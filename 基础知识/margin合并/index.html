@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.demo{
+			border : 1px solid red;
+			height: 20px;
+			margin : 10px;
+		}
+	</style>
+</head>
+<body>
+	<p>下面div和div之间的间距竟然是10px；margin发生了合并(BFC不起作用)</p>
+	<div class="demo"></div>
+	<div class="demo"></div>
+	<div class="demo"></div>
+	<p>------------------------解决方案背下来就行了------------------------</p>
+	<p>解决方案一 : style="border : 0.1px solid red"</p>
+	<div class="demo"></div>
+	<div style="border : 0.1px solid red"></div>
+	<div class="demo"></div>
+	<div class="demo"></div>
+	<p>------------------------------------------------</p>
+	<p>解决方案二.：display: table/flex</p>
+	<div class="demo"></div>
+	<div style="display: table;"></div>
+	<div class="demo"></div>
+	<div style="display: flex;"></div>
+	<div class="demo"></div>
+</body>
+</html>
