@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin : 0;
+			padding: 0;
+			list-style: none;
+		}
+		nav{
+			display: flex;
+			justify-content: space-between;
+		}
+		.logo{
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background-color: grey;
+		}
+		.pc_ul{
+			display: flex;
+			align-items: center;
+		}
+		.pc_ul li{
+			border : 1px solid #ccc;
+			margin : 0 20px;
+		}
+		button{
+			display: none;
+		}
+		.mobile_ul{
+			display: none;
+		}
+
+		@media (max-width:451px){
+			.pc_ul{
+				display: none;
+			}
+			button{
+				display: block;
+			}
+			.mobile_ul{
+				display: flex;
+			}
+			.mobile_ul>li{
+				flex : 1;
+				text-align: center;
+			}
+
+			.hide{
+				display: none;
+			}
+		}
+	</style>
+</head>
+<body>
+	<nav>
+		<div class="logo"></div>
+		<ul class="pc_ul">
+			<li><a href="javascript:;">菜单1</a></li>
+			<li><a href="javascript:;">菜单2</a></li>
+			<li><a href="javascript:;">菜单3</a></li>
+			<li><a href="javascript:;">菜单4</a></li>
+		</ul>
+		<button id="mobileButton">菜单</button>
+	</nav>
+	<ul class="mobile_ul hide">
+		<li><a href="javascript:;">菜单5</a></li>
+		<li><a href="javascript:;">菜单6</a></li>
+		<li><a href="javascript:;">菜单7</a></li>
+		<li><a href="javascript:;">菜单8</a></li>
+	</ul>
+	<script>
+		document.querySelector("#mobileButton").onclick = function(){
+			document.querySelector(".mobile_ul").classList.toggle('hide')
+		}
+	</script>
+</body>
+</html>
