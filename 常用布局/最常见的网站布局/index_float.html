@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.parent{
+			background-color: #ccc;
+			min-width : 800px;
+		}
+		.clearfix::after{
+			content : '';
+			clear : both;
+			display: block;
+		}
+		.clearfix{
+			zoom : 1;/*IE6 SUPPORT*/
+		}
+		.parent>.logo{
+			float: left;
+			width: 100px;
+			line-height: 50px;
+			background-color: #000;
+			text-align: center;
+			color: #fff;
+		}
+		.nav{
+			float: right;
+		}
+		.nav>.child{
+			line-height: 50px;
+			margin-left : 6px;
+			font-size: 20px;
+		}
+
+		.banner{
+			width: 800px;
+			height: 600px;
+			background-color: red;
+			margin : 10px auto;
+			background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1516622217&di=a35b0ed30644fb52079d5c1f61e8c5ae&imgtype=jpg&er=1&src=http%3A%2F%2Fimg5.duitang.com%2Fuploads%2Fblog%2F201308%2F02%2F20130802195114_i2T5Z.thumb.700_0.jpeg) no-repeat center;
+			background-size: cover;
+		}
+
+		.pictures{
+			width: 800px;
+			margin: 10px auto;
+			border : 1px solid #ccc;
+		}
+		.picture{
+			width: 191px;
+			height: 191px;
+			background-color: green;
+			float: left;
+			margin: 6px;
+		}
+		.picture:nth-child(4n+1){
+			margin-left : 0;
+		}
+		.picture:nth-child(4n+4){
+			margin-right : 0;
+		}
+
+		.picture1{
+			width: 191px;
+			height: 191px;
+			background-color: grey;
+			float: left;
+			margin: 6px;
+		}
+		.pictureContainer{
+			margin-left : -6px;
+			margin-right : -6px;
+		}
+		.art{
+			/* width: 600px; */
+			margin: 0 auto;
+			padding-left: 200px;
+		}
+		.art>.sider{
+			width: 200px;
+			background-color: red;
+			height: 300px;
+			float: left;
+			margin-left : -200px;
+		}
+		.art>.main{
+			background-color: green;
+			height: 300px;
+		}
+	</style>
+</head>
+<body>
+	<div class="parent clearfix">
+		<div class="logo">logo</div>
+		<div class="nav clearfix">
+			<div class="child" style="float : left;">儿子1</div>
+			<div class="child" style="float : left;">儿子2</div>
+		</div>
+	</div>
+	<div class="banner">
+	</div>
+	<div class="pictures clearfix">
+		<div class="picture"></div>
+		<div class="picture"></div>
+		<div class="picture"></div>
+		<div class="picture"></div>
+		<div class="picture"></div>
+		<div class="picture"></div>
+		<div class="picture"></div>
+		<div class="picture"></div>
+	</div>
+	<div class="pictures clearfix">
+		<div class="pictureContainer clearfix">
+			<div class="picture1"></div>
+			<div class="picture1"></div>
+			<div class="picture1"></div>
+			<div class="picture1"></div>
+			<div class="picture1"></div>
+			<div class="picture1"></div>
+			<div class="picture1"></div>
+			<div class="picture1"></div>
+		</div>
+	</div>
+	<div class="art">
+		<div class="sider"></div>
+		<div class="main"></div>
+	</div>
+</body>
+</html>
