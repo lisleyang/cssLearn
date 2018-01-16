@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin : 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		.parent{
+			width: 300px;
+			border : 1px solid red;
+			margin : 10px;
+		}
+		.gege{
+			width: 100px;
+			height: 300px;
+			float : left;
+			background-color: green;
+		}
+		.didi{
+			height: 300px;
+			border : 5px solid blue;
+		}
+		.didi2{
+			height: 300px;
+			border : 5px solid blue;
+			overflow: auto;
+		}
+		.didi3{
+			height: 300px;
+			border : 5px solid blue;
+			margin-left : 100px;
+		}
+		.parent1{
+			padding-left : 100px;
+		}
+		.parent1>.gege{
+			margin-left : -100px;
+		}
+		..parent1>.didi{
+			margin-left : 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="parent">
+		<div class="gege">原始情况下，右侧块会跑到左边块的下面，因为左边浮动了</div>
+		<div class="didi">2</div>
+	</div>
+	<div class="parent">
+		<div class="gege"></div>
+		<div class="didi2">通过给右侧块加overflow:hidden, 使之成为BFC,则可以解决两个float造成的宽度无法自适应的问题</div>
+	</div>
+
+	<p>实现上面的效果还有两种方法，和BFC无关</p>
+	<div class="parent">
+		<div class="gege"></div>
+		<div class="didi3">用margin-left直接实现</div>
+	</div>
+	<div class="parent parent1">
+		<div class="gege"></div>
+		<div class="didi">用父级padding，左侧元素负margin实现</div>
+	</div>
+</body>
+</html>
